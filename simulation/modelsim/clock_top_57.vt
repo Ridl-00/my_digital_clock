@@ -1,0 +1,172 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench template that is freely editable to  
+// suit user's needs .Comments are provided in each section to help the user    
+// fill out necessary details.                                                  
+// *****************************************************************************
+// Generated on "12/25/2024 02:36:37"
+                                                                                
+// Verilog Test Bench template for design : clock_top_57
+// 
+// Simulation tool : ModelSim (Verilog)
+// 
+
+`timescale 1 ns/ 1 ps
+module clock_top_57_tb();
+// constants                                           
+// general purpose registers
+reg eachvec;
+// test vector input registers
+reg clk_50m_57;
+reg [7:0] key_57;
+// reg rst_57;
+reg [7:0] sw_57;
+// wires                                               
+wire bell_57;
+wire [7:0]  dig_57;
+wire [7:0]  led_57;
+wire [6:0]  seg_57;
+
+// assign statements (if any)                          
+clock_top_57 i1 (
+// port map - connection between master ports and signals/registers   
+	.bell_57(bell_57),
+	.clk_50m_57(clk_50m_57),
+	.dig_57(dig_57),
+	.key_57(key_57),
+	.led_57(led_57),
+	// .rst_57(rst_57),
+	.seg_57(seg_57),
+	.sw_57(sw_57)
+);
+initial begin
+    clk_50m_57 = 0;
+    forever #1 clk_50m_57 = ~clk_50m_57; // 50MHz时钟周期为20ns
+end
+
+initial                                                
+begin                                                  
+    // key_57[7] = 1;
+	key_57 = 8'b10000000;
+	sw_57 = 8'b10000000;
+    // 复位释放
+    #10000;
+    key_57[7] = 0;
+    
+    // 使能时钟
+    #500;
+    sw_57[0] = 1;
+    
+    // 等待一段时间，观察时钟是否正常计数
+    #3000000;
+    // #250000000;
+    
+    // 手动校时模式
+    sw_57[0] = 0;
+	#10;
+    sw_57[1] = 1;
+    
+    // 增加秒
+    #50000;
+    key_57[0] = 1;
+    #50000;
+    key_57[0] = 0;
+
+    // 切换时、分、秒
+    #10000;
+    key_57[2] = 1;
+    #1000000;
+    key_57[2] = 0;
+    // 减少分钟
+    #10000;
+    key_57[1] = 1;
+    #50000;
+    key_57[1] = 0;
+    
+
+    
+    // 结束手动校时
+    #100;
+    sw_57[1] = 0;
+    sw_57[0] = 1;
+    // 观察自动计数
+    #1000;
+    sw_57[0]=0;
+    sw_57[2] = 1;
+    #100;
+    key_57[0] = 1;
+    #1000000;
+    key_57[1] = 1; //0
+    #50000;
+    key_57[1] = 0;
+    #1000000;
+    key_57[1] = 1; //1
+    #50000;
+    key_57[1] = 0;
+    #1000000;
+    key_57[1] = 1; //2
+    #50000;
+    key_57[1] = 0;
+    #1000000;
+    key_57[1] = 1; //3
+    #50000;
+    key_57[1] = 0;
+    #1000000;
+    key_57[0] = 0;
+    #50000;
+    key_57[2] = 1;
+    #50000;
+    key_57[2] = 0;
+    #1000;
+    sw_57 = 8'b00001101;
+    #10000;
+    key_57[0] = 1; //1
+    #50000;
+    key_57[0] = 0;
+    #1000000;
+    key_57[0] = 1; //2
+    #50000;
+    key_57[0] = 0;
+    #1000000;
+    key_57[0] = 1; //3
+    #50000;
+    key_57[0] = 0;
+    #1000000;    
+
+    sw_57 = 8'b11000000;
+    key_57[0] = 1;
+    #100000;
+    key_57[0] = 0;
+    key_57[7] = 1;
+    #100000;
+    key_57[7] = 0;
+
+    // 测试结束
+    $display("Testbench finished.");
+    $finish;                                                       
+end                                                    
+always                                                 
+// optional sensitivity list                           
+// @(event1 or event2 or .... eventn)                  
+begin                                                  
+// code executes for every event on sensitivity list   
+// insert code here --> begin                          
+                                                       
+@eachvec;                                              
+// --> end                                             
+end                                                    
+endmodule
+

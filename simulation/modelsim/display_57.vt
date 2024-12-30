@@ -1,0 +1,102 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench template that is freely editable to  
+// suit user's needs .Comments are provided in each section to help the user    
+// fill out necessary details.                                                  
+// *****************************************************************************
+// Generated on "12/30/2024 10:26:12"
+                                                                                
+// Verilog Test Bench template for design : display_57
+// 
+// Simulation tool : ModelSim (Verilog)
+// 
+
+`timescale 1 ns/ 1 ps
+module display_tb();
+// constants                                           
+// general purpose registers
+reg eachvec;
+// test vector input registers
+reg clk_05_57;
+reg clk_57;
+reg [6:0] hour_57;
+reg [6:0] min_57;
+reg rst_57;
+reg [6:0] sec_57;
+reg [2:0] select_57;
+reg shine_e_57;
+reg time_model_57;
+reg [3:0] week_day_57;
+reg week_e_57;
+// wires                                               
+wire [7:0]  dig_o_57;
+wire [6:0]  seg_57;
+
+// assign statements (if any)                          
+display_57 i1 (
+// port map - connection between master ports and signals/registers   
+	.clk_05_57(clk_05_57),
+	.clk_57(clk_57),
+	.dig_o_57(dig_o_57),
+	.hour_57(hour_57),
+	.min_57(min_57),
+	.rst_57(rst_57),
+	.sec_57(sec_57),
+	.seg_57(seg_57),
+	.select_57(select_57),
+	.shine_e_57(shine_e_57),
+	.time_model_57(time_model_57),
+	.week_day_57(week_day_57),
+	.week_e_57(week_e_57)
+);
+initial begin
+    clk_57 = 0;
+    forever #1 clk_57 = ~clk_57; // 50MHz时钟周期为20ns
+end
+
+initial                                                
+begin                                                  
+rst_57 = 1;
+#1000;
+
+time_model_57=1;
+shine_e_57=0;
+select_57=0;
+rst_57 = 0;
+week_e_57=0;
+week_day_57=0;
+#1000;
+sec_57 = 7'b0010101;
+min_57 = 7'b0101011;
+hour_57 = 7'b1000001;
+#100000;
+
+// --> end                                             
+$display("Running testbench");       
+$finish;                  
+end                                                    
+always                                                 
+// optional sensitivity list                           
+// @(event1 or event2 or .... eventn)                  
+begin                                                  
+// code executes for every event on sensitivity list   
+// insert code here --> begin                          
+                                                       
+@eachvec;                                              
+// --> end                                             
+end                                                    
+endmodule
+

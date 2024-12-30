@@ -1,0 +1,197 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.2"))
+(symbol
+	(rect 64 64 272 496)
+	(text "bell_sound_57" (rect 5 0 74 12)(font "Arial" ))
+	(text "inst" (rect 8 416 25 428)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "clk_50m_57" (rect 0 0 59 12)(font "Arial" ))
+		(text "clk_50m_57" (rect 21 27 80 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "clk_05_57" (rect 0 0 49 12)(font "Arial" ))
+		(text "clk_05_57" (rect 21 43 70 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "rst_57" (rect 0 0 30 12)(font "Arial" ))
+		(text "rst_57" (rect 21 59 51 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "bell_e_57" (rect 0 0 46 12)(font "Arial" ))
+		(text "bell_e_57" (rect 21 75 67 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "sound_e_57" (rect 0 0 59 12)(font "Arial" ))
+		(text "sound_e_57" (rect 21 91 80 103)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "sound_model_57" (rect 0 0 82 12)(font "Arial" ))
+		(text "sound_model_57" (rect 21 107 103 119)(font "Arial" ))
+		(line (pt 0 112)(pt 16 112))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "organ_e_57" (rect 0 0 56 12)(font "Arial" ))
+		(text "organ_e_57" (rect 21 123 77 135)(font "Arial" ))
+		(line (pt 0 128)(pt 16 128))
+	)
+	(port
+		(pt 0 144)
+		(input)
+		(text "key0_out_57" (rect 0 0 63 12)(font "Arial" ))
+		(text "key0_out_57" (rect 21 139 84 151)(font "Arial" ))
+		(line (pt 0 144)(pt 16 144))
+	)
+	(port
+		(pt 0 160)
+		(input)
+		(text "key1_out_57" (rect 0 0 63 12)(font "Arial" ))
+		(text "key1_out_57" (rect 21 155 84 167)(font "Arial" ))
+		(line (pt 0 160)(pt 16 160))
+	)
+	(port
+		(pt 0 176)
+		(input)
+		(text "key2_out_57" (rect 0 0 63 12)(font "Arial" ))
+		(text "key2_out_57" (rect 21 171 84 183)(font "Arial" ))
+		(line (pt 0 176)(pt 16 176))
+	)
+	(port
+		(pt 0 192)
+		(input)
+		(text "key3_out_57" (rect 0 0 63 12)(font "Arial" ))
+		(text "key3_out_57" (rect 21 187 84 199)(font "Arial" ))
+		(line (pt 0 192)(pt 16 192))
+	)
+	(port
+		(pt 0 208)
+		(input)
+		(text "key4_out_57" (rect 0 0 63 12)(font "Arial" ))
+		(text "key4_out_57" (rect 21 203 84 215)(font "Arial" ))
+		(line (pt 0 208)(pt 16 208))
+	)
+	(port
+		(pt 0 224)
+		(input)
+		(text "key5_out_57" (rect 0 0 63 12)(font "Arial" ))
+		(text "key5_out_57" (rect 21 219 84 231)(font "Arial" ))
+		(line (pt 0 224)(pt 16 224))
+	)
+	(port
+		(pt 0 240)
+		(input)
+		(text "key6_out_57" (rect 0 0 63 12)(font "Arial" ))
+		(text "key6_out_57" (rect 21 235 84 247)(font "Arial" ))
+		(line (pt 0 240)(pt 16 240))
+	)
+	(port
+		(pt 0 256)
+		(input)
+		(text "key7_out_57" (rect 0 0 63 12)(font "Arial" ))
+		(text "key7_out_57" (rect 21 251 84 263)(font "Arial" ))
+		(line (pt 0 256)(pt 16 256))
+	)
+	(port
+		(pt 0 272)
+		(input)
+		(text "do_57" (rect 0 0 29 12)(font "Arial" ))
+		(text "do_57" (rect 21 267 50 279)(font "Arial" ))
+		(line (pt 0 272)(pt 16 272))
+	)
+	(port
+		(pt 0 288)
+		(input)
+		(text "re_57" (rect 0 0 27 12)(font "Arial" ))
+		(text "re_57" (rect 21 283 48 295)(font "Arial" ))
+		(line (pt 0 288)(pt 16 288))
+	)
+	(port
+		(pt 0 304)
+		(input)
+		(text "mi_57" (rect 0 0 29 12)(font "Arial" ))
+		(text "mi_57" (rect 21 299 50 311)(font "Arial" ))
+		(line (pt 0 304)(pt 16 304))
+	)
+	(port
+		(pt 0 320)
+		(input)
+		(text "fa_57" (rect 0 0 28 12)(font "Arial" ))
+		(text "fa_57" (rect 21 315 49 327)(font "Arial" ))
+		(line (pt 0 320)(pt 16 320))
+	)
+	(port
+		(pt 0 336)
+		(input)
+		(text "so_57" (rect 0 0 29 12)(font "Arial" ))
+		(text "so_57" (rect 21 331 50 343)(font "Arial" ))
+		(line (pt 0 336)(pt 16 336))
+	)
+	(port
+		(pt 0 352)
+		(input)
+		(text "la_57" (rect 0 0 25 12)(font "Arial" ))
+		(text "la_57" (rect 21 347 46 359)(font "Arial" ))
+		(line (pt 0 352)(pt 16 352))
+	)
+	(port
+		(pt 0 368)
+		(input)
+		(text "ti_57" (rect 0 0 23 12)(font "Arial" ))
+		(text "ti_57" (rect 21 363 44 375)(font "Arial" ))
+		(line (pt 0 368)(pt 16 368))
+	)
+	(port
+		(pt 0 384)
+		(input)
+		(text "doh_57" (rect 0 0 35 12)(font "Arial" ))
+		(text "doh_57" (rect 21 379 56 391)(font "Arial" ))
+		(line (pt 0 384)(pt 16 384))
+	)
+	(port
+		(pt 208 32)
+		(output)
+		(text "bell_w_57" (rect 0 0 47 12)(font "Arial" ))
+		(text "bell_w_57" (rect 152 24 191 36)(font "Arial" ))
+		(line (pt 208 32)(pt 192 32))
+	)
+	(drawing
+		(rectangle (rect 16 16 192 416))
+	)
+)

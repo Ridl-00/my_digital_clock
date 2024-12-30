@@ -1,0 +1,98 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench template that is freely editable to  
+// suit user's needs .Comments are provided in each section to help the user    
+// fill out necessary details.                                                  
+// *****************************************************************************
+// Generated on "12/23/2024 10:41:21"
+                                                                                
+// Verilog Test Bench template for design : clock_top_57
+// 
+// Simulation tool : ModelSim (Verilog)
+// 
+
+`timescale 1 ps/ 1 ps
+// module clock_top_57_vlg_tst();
+module clock_top_57_tb();
+// constants                                           
+// general purpose registers
+reg eachvec;
+// test vector input registers
+reg clk_50m_57;
+reg [7:0] key_57;
+reg rst_57;
+reg [7:0] sw_57;
+// wires                                               
+wire bell_57;
+wire [7:0]  dig_57;
+wire [7:0]  led_57;
+wire [6:0]  seg_57;
+
+// assign statements (if any)                          
+clock_top_57 i1 (
+// port map - connection between master ports and signals/registers   
+	.bell_57(bell_57),
+	.clk_50m_57(clk_50m_57),
+	.dig_57(dig_57),
+	.key_57(key_57),
+	.led_57(led_57),
+	.rst_57(rst_57),
+	.seg_57(seg_57),
+	.sw_57(sw_57)
+);
+
+initial begin
+    clk_50m_57 = 0;
+    forever #10 clk_50m_57 = ~clk_50m_57; // 50MHz时钟周期为20ns
+end
+
+initial                                                
+begin                                                  
+// code that executes only once                        
+// insert code here --> begin       
+sw_57 = 8'b00000000 ;                   
+rst_57 = 1;
+#10;
+rst_57 = 0;    
+#10;                        
+sw_57[0]=1;
+#10;
+sw_57[0]=0;
+#10;
+sw_57[4]=1;
+#10;
+sw_57[4]=0;
+#10;
+sw_57[4]=1;
+#10;
+sw_57[0]=1;
+#10;
+
+// --> end                                             
+$display("Running testbench");                       
+end                                                    
+always                                                 
+// optional sensitivity list                           
+// @(event1 or event2 or .... eventn)                  
+begin                                                  
+// code executes for every event on sensitivity list   
+// insert code here --> begin                          
+                                                       
+@eachvec;                                              
+// --> end                                             
+end                                                    
+endmodule
+

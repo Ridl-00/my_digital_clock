@@ -1,0 +1,130 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2013 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II 64-Bit
+# Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+# Date created = 08:33:23  December 13, 2024
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		clock_57_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone III"
+set_global_assignment -name DEVICE EP3C16Q240C8
+set_global_assignment -name TOP_LEVEL_ENTITY display_57
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 13.1
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "08:33:23  DECEMBER 13, 2024"
+set_global_assignment -name LAST_QUARTUS_VERSION 13.1
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim (Verilog)"
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name DEVICE_FILTER_PIN_COUNT 240
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
+set_location_assignment PIN_31 -to clk_50m_57
+set_location_assignment PIN_20 -to dig_57[7]
+set_location_assignment PIN_19 -to dig_57[6]
+set_location_assignment PIN_18 -to dig_57[5]
+set_location_assignment PIN_9 -to dig_57[4]
+set_location_assignment PIN_13 -to dig_57[3]
+set_location_assignment PIN_5 -to dig_57[2]
+set_location_assignment PIN_6 -to dig_57[1]
+set_location_assignment PIN_240 -to dig_57[0]
+set_location_assignment PIN_221 -to seg_57[6]
+set_location_assignment PIN_223 -to seg_57[5]
+set_location_assignment PIN_231 -to seg_57[4]
+set_location_assignment PIN_230 -to seg_57[3]
+set_location_assignment PIN_222 -to seg_57[2]
+set_location_assignment PIN_220 -to seg_57[1]
+set_location_assignment PIN_226 -to seg_57[0]
+set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
+set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH display_tb -section_id eda_simulation
+set_global_assignment -name EDA_TEST_BENCH_NAME clock_top_57 -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id clock_top_57
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME clock_top_57_tb -section_id clock_top_57
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_location_assignment PIN_174 -to bell_57
+set_location_assignment PIN_160 -to key_57[7]
+set_location_assignment PIN_148 -to key_57[6]
+set_location_assignment PIN_146 -to key_57[5]
+set_location_assignment PIN_144 -to key_57[4]
+set_location_assignment PIN_143 -to key_57[3]
+set_location_assignment PIN_145 -to key_57[2]
+set_location_assignment PIN_147 -to key_57[1]
+set_location_assignment PIN_159 -to key_57[0]
+set_location_assignment PIN_73 -to sw_57[7]
+set_location_assignment PIN_161 -to sw_57[0]
+set_location_assignment PIN_72 -to sw_57[6]
+set_location_assignment PIN_78 -to sw_57[5]
+set_location_assignment PIN_76 -to sw_57[4]
+set_location_assignment PIN_81 -to sw_57[3]
+set_location_assignment PIN_80 -to sw_57[2]
+set_location_assignment PIN_176 -to sw_57[1]
+set_global_assignment -name EDA_TEST_BENCH_NAME time_clock_correct_57_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id time_clock_correct_57_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME time_clock_correct_57_tb -section_id time_clock_correct_57_tb
+set_global_assignment -name VERILOG_FILE design_sources_57/time_stopwatch_run.v
+set_global_assignment -name VERILOG_FILE design_sources_57/time_stopwatch_record_57.v
+set_global_assignment -name VERILOG_FILE design_sources_57/deshake_57.v
+set_global_assignment -name VERILOG_FILE design_sources_57/bell_sound_57.v
+set_global_assignment -name VERILOG_FILE design_sources_57/clock_top_57.v
+set_global_assignment -name VERILOG_FILE design_sources_57/fre_div_57.v
+set_global_assignment -name VERILOG_FILE design_sources_57/register_57.v
+set_global_assignment -name VERILOG_FILE design_sources_57/display_57.v
+set_global_assignment -name VERILOG_FILE design_sources_57/week_ctrl_57.v
+set_global_assignment -name VERILOG_FILE design_sources_57/time_clock_correct_57.v
+set_global_assignment -name VERILOG_TEST_BENCH_FILE simulation/modelsim/clock_top_57.vt
+set_global_assignment -name VERILOG_TEST_BENCH_FILE simulation/modelsim/time_clock_correct_57.vt
+set_global_assignment -name VERILOG_FILE design_sources_57/deshake1_57.v
+set_global_assignment -name SDC_FILE clock_57.sdc
+set_global_assignment -name VERILOG_FILE design_sources_57/time_alarm_set_57.v
+set_location_assignment PIN_239 -to led_57[7]
+set_location_assignment PIN_238 -to led_57[6]
+set_location_assignment PIN_237 -to led_57[5]
+set_location_assignment PIN_236 -to led_57[4]
+set_location_assignment PIN_235 -to led_57[3]
+set_location_assignment PIN_234 -to led_57[2]
+set_location_assignment PIN_233 -to led_57[1]
+set_location_assignment PIN_232 -to led_57[0]
+set_global_assignment -name VERILOG_FILE design_sources_57/led_light_57.v
+set_global_assignment -name VERILOG_FILE design_sources_57/bell_led_ctrl_57.v
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/clock_top_57.vt -section_id clock_top_57
+set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/time_clock_correct_57.vt -section_id time_clock_correct_57_tb
+set_global_assignment -name EDA_TEST_BENCH_NAME display_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id display_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME display_tb -section_id display_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/display_57.vt -section_id display_tb
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
