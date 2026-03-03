@@ -1,7 +1,4 @@
 # Quartus 生成的临时/中间文件
-db/
-incremental_db/
-output_files/
 *.rpt
 *.smsg
 *.summary
@@ -22,7 +19,6 @@ output_files/
 *.qpf.bak
 
 # ModelSim / 仿真临时文件
-simulation/modelsim/
 *.vcd
 *.wlf
 *.do~

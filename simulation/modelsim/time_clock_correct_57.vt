@@ -1,0 +1,141 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench template that is freely editable to  
+// suit user's needs .Comments are provided in each section to help the user    
+// fill out necessary details.                                                  
+// *****************************************************************************
+// Generated on "12/25/2024 01:15:55"
+                                                                                
+// Verilog Test Bench template for design : time_clock_correct_57
+// 
+// Simulation tool : ModelSim (Verilog)
+// 
+
+`timescale 1 ns/ 1 ps
+module time_clock_correct_57_tb();
+// constants                                           
+// general purpose registers
+reg eachvec;
+// test vector input registers
+reg clk_1_57;
+reg clk_50m_57;
+reg clock_e_57;
+reg correct_e_57;
+reg key_add_57;
+reg key_select_57;
+reg key_sub_57;
+reg rst_57;
+// wires                                               
+wire [5:0]  hour_57;
+wire [5:0]  min_57;
+wire [5:0]  sec_57;
+wire [2:0]  select_57;
+
+// assign statements (if any)                          
+time_clock_correct_57 i1 (
+// port map - connection between master ports and signals/registers   
+	.clk_1_57(clk_1_57),
+	.clk_50m_57(clk_50m_57),
+	.clock_e_57(clock_e_57),
+	.correct_e_57(correct_e_57),
+	.hour_57(hour_57),
+	.key_add_57(key_add_57),
+	.key_select_57(key_select_57),
+	.key_sub_57(key_sub_57),
+	.min_57(min_57),
+	.rst_57(rst_57),
+	.sec_57(sec_57),
+	.select_57(select_57)
+);
+
+initial begin
+    clk_50m_57 = 0;
+    forever #10 clk_50m_57 = ~clk_50m_57; // 50MHz时钟周期为20ns
+end
+initial begin
+    clk_1_57 = 0;
+    forever #10000 clk_1_57 = ~clk_1_57;
+end
+initial                                                
+begin                                                  
+// code that executes only once                        
+// insert code here --> begin                          
+// 初始化输入
+    rst_57 = 1;
+    clock_e_57 = 0;
+    correct_e_57 = 0;
+    key_add_57 = 0;
+    key_select_57 = 0;
+    key_sub_57 = 0;
+    
+    // 复位释放
+    #10000;
+    rst_57 = 0;
+    
+    // 使能时钟
+    #500;
+    clock_e_57 = 1;
+    
+    // 等待一段时间，观察时钟是否正常计数
+    #3000000;
+    
+    // 手动校时模式
+    clock_e_57 = 0;
+	#10;
+    correct_e_57 = 1;
+    
+    // 增加秒
+    #50;
+    key_add_57 = 1;
+    #50;
+    key_add_57 = 0;
+    
+    // 减少分钟
+    #100;
+    key_sub_57 = 1;
+    #50;
+    key_sub_57 = 0;
+    
+    // 切换时、分、秒
+    #100;
+    key_select_57 = 1;
+    #50;
+    key_select_57 = 0;
+    
+    // 结束手动校时
+    #100;
+    correct_e_57 = 0;
+    clock_e_57 = 1;
+    // 观察自动计数
+    #1000;
+    
+    // 测试结束
+    $display("Testbench finished.");
+    $finish;                                                       
+// --> end                  
+end                                                    
+always                                                 
+// optional sensitivity list                           
+// @(event1 or event2 or .... eventn)                  
+begin                                                  
+// code executes for every event on sensitivity list   
+// insert code here --> begin                          
+                                                       
+@eachvec;                                              
+// --> end                                             
+end                                                    
+endmodule
+
