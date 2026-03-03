@@ -1,4 +1,4 @@
-# Quartus 生成的临时/中间文件
+# Quartus 生成的中间文件和输出
 *.rpt
 *.smsg
 *.summary
@@ -17,16 +17,11 @@
 *.qws
 *.qsf.bak
 *.qpf.bak
-
-# ModelSim / 仿真临时文件
-*.vcd
-*.wlf
-*.do~
-
-# 其他常见垃圾
 *.bak
 *.old
 *.log
 *.txt~
+
+# 其他常见忽略
 .DS_Store
 Thumbs.db
