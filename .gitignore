@@ -1,0 +1,36 @@
+# Quartus 生成的临时/中间文件
+db/
+incremental_db/
+output_files/
+*.rpt
+*.smsg
+*.summary
+*.done
+*.map
+*.pin
+*.jdi
+*.sld
+*.rbf
+*.pof
+*.sof
+*.jam
+*.jic
+*.jtag
+*.cdf
+*.qws
+*.qsf.bak
+*.qpf.bak
+
+# ModelSim / 仿真临时文件
+simulation/modelsim/
+*.vcd
+*.wlf
+*.do~
+
+# 其他常见垃圾
+*.bak
+*.old
+*.log
+*.txt~
+.DS_Store
+Thumbs.db
